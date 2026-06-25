@@ -232,7 +232,7 @@ function initials(name) {
 function parseShots(aiText) {
   if (!aiText) return [];
   const text = typeof aiText === "string" ? aiText : String(aiText);
-  const shots = [];
+  const blocks = text.split
   const blocks = text.split(/(?=\n?#\d+\.)/).filter(b => b.trim());
   for (const block of blocks) {
     const titleMatch = block.match(/#\d+\.\s*(.+)/);
